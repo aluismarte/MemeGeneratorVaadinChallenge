@@ -29,8 +29,8 @@ build/
 .classpath
 *.cache
 
-# Modelo de prueba
-MyTest.groovy
+# Notes
+notes.txt
 
 # Ignore Gradle GUI config
 gradle-app.setting
