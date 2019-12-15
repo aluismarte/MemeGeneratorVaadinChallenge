@@ -54,6 +54,10 @@ dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
 }
 
+springBoot {
+    buildInfo()
+}
+
 test {
     useJUnitPlatform()
 }
