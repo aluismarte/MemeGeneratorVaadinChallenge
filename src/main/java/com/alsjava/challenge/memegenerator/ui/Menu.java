@@ -1,5 +1,6 @@
 package com.alsjava.challenge.memegenerator.ui;
 
+import com.alsjava.challenge.memegenerator.utils.Languages;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.RouterLink;
 
@@ -9,8 +10,8 @@ import com.vaadin.flow.router.RouterLink;
 public class Menu extends VerticalLayout {
 
     public Menu() {
-        RouterLink MemeCreator = new RouterLink("MemeCreator", MemeCreator.class);
-        RouterLink gallery = new RouterLink("Gallery", Gallery.class);
+        RouterLink MemeCreator = new RouterLink(Languages.get().i18n("link.meme.generator"), MemeGenerator.class);
+        RouterLink gallery = new RouterLink(Languages.get().i18n("link.gallery"), Gallery.class);
         add(MemeCreator, gallery);
     }
 }

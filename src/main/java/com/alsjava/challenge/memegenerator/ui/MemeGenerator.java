@@ -10,9 +10,9 @@ import com.vaadin.flow.router.RouteAlias;
  */
 @Route(value = "creator", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
-public class MemeCreator extends VerticalLayout {
+public class MemeGenerator extends VerticalLayout {
 
-    public MemeCreator() {
+    public MemeGenerator() {
         add(new Text("Meme creator"));
     }
 }

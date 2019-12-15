@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Value;
  * Created by aluis on 12/10/19.
  */
 @Push
-@PWA(name = "Meme Generator On Vaadin", shortName = "Meme Generator")
+@PWA(name = "Meme Generator Vaadin", shortName = "Meme Generator")
 public class MainLayout extends AppLayout implements RouterLayout {
 
     private final Div contentWrapper = new Div();
