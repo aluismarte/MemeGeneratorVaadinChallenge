@@ -6,13 +6,15 @@ Meme creator Open write on Vaadin 14 to create your amazing memes!
  - Load memes on gallery
  - Create a meme using a meme on gallery
  - Put text fixed on top and bottom.
- - Save meme
  - Change text color.
+
+# Notes
+ - Implement meme using a SVG and some vars to move and get the final result on JPN o PNG
 
 # On next release
  - Move text with mouse
  - Change text size.
-
+ - Save meme
  - Create configurator to put text boxes on specific places.
  - Add more than 2 boxes of text.
 

@@ -61,6 +61,15 @@ class MemeGenerator extends LitElement {
     }
 
     _generateMeme() {
+        // Need to convert svg and later call save
+        // window.saveAs(blob, 'my-node.png');
+    }
+
+    convertSvgToImage() {
+        // Create canvas?
+        // Configure canvas
+        // set Images size (maybe configure)
+        // Parse to canvas
     }
 }
 
