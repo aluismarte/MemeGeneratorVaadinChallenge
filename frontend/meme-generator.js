@@ -1,4 +1,4 @@
-import {css, html, LitElement} from 'lit-element';
+import {css, html, LitElement, unsafeCSS} from 'lit-element';
 
 class MemeGenerator extends LitElement {
 
@@ -20,9 +20,7 @@ class MemeGenerator extends LitElement {
                 .meme {
                     position: relative;
                     text-align: center;
-                    color: white;
-                    width: 100%;
-                    height: 100%;
+                    color: var(--meme-generator-text-color, white);
                 }
                 .meme-img {
                     width: 100%;
@@ -56,6 +54,10 @@ class MemeGenerator extends LitElement {
                 <img class="meme-img" alt="" src="${this.src}"/>
              <div>
             `;
+    }
+
+    _changeTextColor(color) {
+        this.style.setProperty('--meme-generator-text-color', color);
     }
 }
 

@@ -1,6 +1,7 @@
 package com.alsjava.challenge.memegenerator.ui;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.server.StreamResource;
@@ -15,9 +16,13 @@ import java.io.UncheckedIOException;
  */
 @Tag("meme-generator")
 @JsModule("./meme-generator.js")
-public class MemeGenerator extends Component {
+public class MemeGenerator extends Component implements HasSize {
 
     public MemeGenerator() {
+    }
+
+    public void setTextColor(String textColor) {
+        getElement().callJsFunction("_changeTextColor", textColor);
     }
 
     public void setTopText(String topText) {
