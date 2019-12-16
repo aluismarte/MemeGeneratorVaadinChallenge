@@ -1,4 +1,4 @@
-import {css, html, LitElement, unsafeCSS} from 'lit-element';
+import {css, html, LitElement} from 'lit-element';
 
 class MemeGenerator extends LitElement {
 
@@ -58,6 +58,9 @@ class MemeGenerator extends LitElement {
 
     _changeTextColor(color) {
         this.style.setProperty('--meme-generator-text-color', color);
+    }
+
+    _generateMeme() {
     }
 }
 

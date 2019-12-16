@@ -21,6 +21,10 @@ public class MemeGenerator extends Component implements HasSize {
     public MemeGenerator() {
     }
 
+    public void generateMeme() {
+        getElement().callJsFunction("_generateMeme");
+    }
+
     public void setTextColor(String textColor) {
         getElement().callJsFunction("_changeTextColor", textColor);
     }

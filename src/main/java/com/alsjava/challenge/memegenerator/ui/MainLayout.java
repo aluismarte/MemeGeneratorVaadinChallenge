@@ -36,9 +36,7 @@ public class MainLayout extends VerticalLayout {
         tfBottomText.setValueChangeMode(ValueChangeMode.EAGER);
         tfBottomText.addValueChangeListener(event -> memeGenerator.setBottomText(event.getValue()));
         Button btnGenerate = new Button(Languages.get().i18n("action.generate"));
-        btnGenerate.addClickListener(event -> {
-            // Create image.
-        });
+        btnGenerate.addClickListener(event -> memeGenerator.generateMeme());
         ComboBox<String> cbTextColor = new ComboBox<>(); // Use a color picker to get more colors
         cbTextColor.setItems("red", "black", "white", "blue");
         cbTextColor.addValueChangeListener(event -> memeGenerator.setTextColor(event.getValue()));
