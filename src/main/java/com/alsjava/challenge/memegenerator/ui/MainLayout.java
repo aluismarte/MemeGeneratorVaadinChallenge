@@ -9,8 +9,6 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.RouterLayout;
 import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.spring.annotation.SpringComponent;
-import org.springframework.beans.factory.annotation.Value;
 
 /**
  * Created by aluis on 12/10/19.
@@ -23,7 +21,7 @@ public class MainLayout extends AppLayout implements RouterLayout {
 
     public MainLayout() {
         setPrimarySection(Section.DRAWER);
-        addToNavbar(true, new DrawerToggle(), new Label(Constants.get().APP_NAME));
+        addToNavbar(true, new DrawerToggle(), new Label(Constants.APP_NAME));
         addToDrawer(new Menu());
         setContent(contentWrapper);
     }

@@ -10,7 +10,7 @@ import com.vaadin.flow.router.RouterLink;
 public class Menu extends VerticalLayout {
 
     public Menu() {
-        RouterLink MemeCreator = new RouterLink(Languages.get().i18n("link.meme.generator"), MemeGenerator.class);
+        RouterLink MemeCreator = new RouterLink(Languages.get().i18n("link.meme.generator"), MemeGeneratorUI.class);
         RouterLink gallery = new RouterLink(Languages.get().i18n("link.gallery"), Gallery.class);
         add(MemeCreator, gallery);
     }

@@ -6,13 +6,11 @@ import org.springframework.beans.factory.annotation.Value;
 /**
  * Created by aluis on 12/14/19.
  */
-@SpringComponent
 public class Constants {
 
     private static Constants instance = null;
 
-    @Value("${info.app.name}")
-    public String APP_NAME;
+    public static final String APP_NAME = "Meme Generator Vaadin";
 
     private Constants() {
     }
