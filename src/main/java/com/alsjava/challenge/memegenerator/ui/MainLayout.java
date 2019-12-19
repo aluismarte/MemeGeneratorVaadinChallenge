@@ -40,7 +40,7 @@ public class MainLayout extends VerticalLayout {
         ComboBox<String> cbTextColor = new ComboBox<>(); // Use a color picker to get more colors
         cbTextColor.setItems("red", "black", "white", "blue");
         cbTextColor.addValueChangeListener(event -> memeGenerator.setTextColor(event.getValue()));
-        cbTextColor.setValue("white");
+        cbTextColor.setValue("red");
 
         HorizontalLayout hlMenu = new HorizontalLayout(tfTopText, tfBottomText, cbTextColor, btnGenerate);
         hlMenu.setWidthFull();
@@ -50,6 +50,9 @@ public class MainLayout extends VerticalLayout {
         Grid<File> grid = new Grid<>();
         grid.addColumn(File::getName).setHeader("File");
         grid.addSelectionListener(event -> memeGenerator.setSrc(event.getFirstSelectedItem().orElse(null)));
+
+        memeGenerator.setTopText("Hello");
+        memeGenerator.setBottomText("Meme!");
 
         File dir = new File("./memes");
         File[] memes = dir.listFiles();

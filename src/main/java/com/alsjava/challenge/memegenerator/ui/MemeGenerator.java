@@ -26,7 +26,19 @@ public class MemeGenerator extends Component implements HasSize {
     }
 
     public void setTextColor(String textColor) {
-        getElement().callJsFunction("_changeTextColor", textColor);
+        getElement().callJsFunction("_textColor", textColor);
+    }
+
+    public void setFontFamily(String fontFamily) {
+        getElement().callJsFunction("_fontFamily", fontFamily);
+    }
+
+    public void setFontSize(String fontSize) {
+        getElement().callJsFunction("_fontSize", fontSize);
+    }
+
+    public void setTextTransform(String textTransform) {
+        getElement().callJsFunction("_textTransform", textTransform);
     }
 
     public void setTopText(String topText) {
