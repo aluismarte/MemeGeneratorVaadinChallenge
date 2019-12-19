@@ -35,8 +35,7 @@ class MemeGenerator extends LitElement {
         baseImage.src = val;
         baseImage.onload = function () {
             generator.srcBase64 = generator.getBase64Image(baseImage);
-            generator.requestUpdate('src', oldValue);
-            generator.requestUpdate();
+            generator.requestUpdate('src', val);
         };
     }
 
@@ -44,7 +43,6 @@ class MemeGenerator extends LitElement {
         return css
             `
                 .meme {
-                    position: relative;
                     text-align: center;
                     userSelect: "none";
                     cursor: "pointer";
@@ -52,11 +50,7 @@ class MemeGenerator extends LitElement {
                     fontFamily: var(--meme-generator-font-family, 'Impact');
                     fontSize: var(--meme-generator-font-size, '50px');
                     textTransform: var(--meme-generator-text-transform, 'uppercase');
-                }
-                
-                #memeGenerated {
-                    width: 100%;
-                    height: 100%;
+                    z-index: 4;
                 }
             `;
     }
@@ -65,11 +59,11 @@ class MemeGenerator extends LitElement {
         return html
             `
                 <svg xmlns="http://www.w3.org/2000/svg" id="memeGenerated" width=${this.memeWidth} height=${this.memeHeight}>
-                  <image style="z-index: 2;" xlink:href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
-                  <text style="z-index: 4;" dominant-baseline="middle" text-anchor="middle" x=${this.topTextX} y=${this.topTextY} >
+                  <image style="z-index: 2;" href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
+                  <text class="meme" dominant-baseline="middle" text-anchor="middle" x=${this.topTextX} y=${this.topTextY} >
                       ${this.topText}
                   </text>
-                  <text style="z-index: 4;" dominant-baseline="middle" text-anchor="middle" x=${this.bottomTextX} y=${this.bottomTextY}>
+                  <text class="meme" dominant-baseline="middle" text-anchor="middle" x=${this.bottomTextX} y=${this.bottomTextY}>
                       ${this.bottomText}
                   </text>
              <div>
