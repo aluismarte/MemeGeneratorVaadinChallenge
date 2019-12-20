@@ -25,7 +25,7 @@ configurations {
 ext {
     junit_jupiter_version = '5.5.2'
     spring_boot_version = '2.2.2.RELEASE'
-    vaadin_version = '14.1.2'
+    vaadin_version = '14.1.3'
     lombok_version = '1.18.10'
     spring_data_provider_version = '2.0.1'
     gson_version = '2.8.6'
@@ -43,7 +43,7 @@ dependencies {
     implementation "com.vaadin:vaadin-spring-boot-starter:$vaadin_version"
     implementation "org.vaadin.artur:spring-data-provider:$spring_data_provider_version"
     // Vaadin Addon
-    implementation "com.github.juchar:color-picker-field-flow:1.0.0"
+    implementation "com.github.appreciated:color-picker-field-flow:2.0.0.beta6"
     // Spring Boot
     implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
     // JSON

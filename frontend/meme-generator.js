@@ -7,11 +7,6 @@ class MemeGenerator extends LitElement {
             topText: {type: String},
             bottomText: {type: String},
             src: {type: String},
-            srcBase64: {type: String},
-            bottomTextY: {type: Number},
-            bottomTextX: {type: Number},
-            topTextY: {type: Number},
-            topTextX: {type: Number},
             memeWidth: {type: Number},
             memeHeight: {type: Number}
         }
@@ -23,33 +18,28 @@ class MemeGenerator extends LitElement {
         this.memeHeight = 300;
         this.topTextY = 20;
         this.topTextX = 200;
-        this.bottomTextY = 280;
+        this.bottomTextY = 270;
         this.bottomTextX = 200;
         this.srcBase64 = "";
     }
 
     set src(val) {
         const oldValue = this.srcBase64;
-        var generator = this;
-        var baseImage = new Image();
+        let generator = this;
+        let baseImage = new Image();
         baseImage.src = val;
         baseImage.onload = function () {
             generator.srcBase64 = generator.getBase64Image(baseImage);
-            generator.requestUpdate('src', val);
+            generator.requestUpdate('src', oldValue);
         };
     }
 
     static get styles() {
-        return css
-            `
+        return css`
                 .meme {
                     text-align: center;
                     userSelect: "none";
                     cursor: "pointer";
-                    color: var(--meme-generator-text-color, white);
-                    fontFamily: var(--meme-generator-font-family, 'Impact');
-                    fontSize: var(--meme-generator-font-size, '50px');
-                    textTransform: var(--meme-generator-text-transform, 'uppercase');
                     z-index: 4;
                 }
             `;
@@ -59,11 +49,11 @@ class MemeGenerator extends LitElement {
         return html
             `
                 <svg xmlns="http://www.w3.org/2000/svg" id="memeGenerated" width=${this.memeWidth} height=${this.memeHeight}>
-                  <image style="z-index: 2;" href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
-                  <text class="meme" dominant-baseline="middle" text-anchor="middle" x=${this.topTextX} y=${this.topTextY} >
+                    <image style="z-index: 2;" href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
+                    <text class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.topTextX} y=${this.topTextY} >
                       ${this.topText}
-                  </text>
-                  <text class="meme" dominant-baseline="middle" text-anchor="middle" x=${this.bottomTextX} y=${this.bottomTextY}>
+                    </text>
+                    <text class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.bottomTextX} y=${this.bottomTextY}>
                       ${this.bottomText}
                   </text>
              <div>
@@ -82,23 +72,18 @@ class MemeGenerator extends LitElement {
         this.style.setProperty('--meme-generator-font-size', size);
     }
 
-    _textTransform(transform) {
-        this.style.setProperty('--meme-generator-text-transform', transform);
-    }
-
     _generateMeme() {
         // Need to convert svg and later call save
         // window.saveAs(blob, 'my-node.png');
     }
 
     getBase64Image(image) {
-        var canvas = document.createElement("canvas");
+        let canvas = document.createElement("canvas");
         canvas.width = image.width;
         canvas.height = image.height;
-        var context2d = canvas.getContext("2d");
+        let context2d = canvas.getContext("2d");
         context2d.drawImage(image, 0, 0);
-        var data = canvas.toDataURL();
-        return data;
+        return canvas.toDataURL();
     }
 
     convertSvgToImage() {

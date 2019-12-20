@@ -21,24 +21,24 @@ public class MemeGenerator extends Component implements HasSize {
     public MemeGenerator() {
     }
 
-    public void generateMeme() {
-        getElement().callJsFunction("_generateMeme");
+    public Double getMemeWidth() {
+        return Double.parseDouble(getElement().getAttribute("memeWidth"));
     }
 
-    public void setTextColor(String textColor) {
-        getElement().callJsFunction("_textColor", textColor);
+    public void setMemeWidth(Double width) {
+        getElement().setAttribute("memeWidth", width.toString());
     }
 
-    public void setFontFamily(String fontFamily) {
-        getElement().callJsFunction("_fontFamily", fontFamily);
+    public Double getMemeHeight() {
+        return Double.parseDouble(getElement().getAttribute("memeHeight"));
     }
 
-    public void setFontSize(String fontSize) {
-        getElement().callJsFunction("_fontSize", fontSize);
+    public void setMemeHeight(Double height) {
+        getElement().setAttribute("memeHeight", height.toString());
     }
 
-    public void setTextTransform(String textTransform) {
-        getElement().callJsFunction("_textTransform", textTransform);
+    public String getTopText() {
+        return getElement().getAttribute("topText");
     }
 
     public void setTopText(String topText) {
@@ -47,6 +47,10 @@ public class MemeGenerator extends Component implements HasSize {
 
     public void setBottomText(String bottomText) {
         getElement().setAttribute("bottomText", bottomText);
+    }
+
+    public String getBottomText() {
+        return getElement().getAttribute("bottomText");
     }
 
     public void setSrc(File file) {
@@ -61,5 +65,21 @@ public class MemeGenerator extends Component implements HasSize {
                 throw new UncheckedIOException(ex);
             }
         }));
+    }
+
+    public void setTextColor(String textColor) {
+        getElement().callJsFunction("_textColor", textColor);
+    }
+
+    public void setFontFamily(String fontFamily) {
+        getElement().callJsFunction("_fontFamily", fontFamily);
+    }
+
+    public void setFontSize(String fontSize) {
+        getElement().callJsFunction("_fontSize", fontSize);
+    }
+
+    public void generateMeme() {
+        getElement().callJsFunction("_generateMeme");
     }
 }
