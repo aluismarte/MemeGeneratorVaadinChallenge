@@ -4,7 +4,7 @@ Meme creator open source write on Lit Element and Vaadin 14 wrapper to create me
 
 ![demo-gif](https://github.com/aluismarte/MemeGeneratorVaadinChallenge/blob/master/media/MemeGeneratorVaadinDemo.gif)
 
-# Version 1.0.0
+# Version 1.0.1
  - Create a meme using grid
  - Put text fixed on top
  - Put text fixed on bottom
