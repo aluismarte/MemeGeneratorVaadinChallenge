@@ -1,6 +1,6 @@
 # MemeGeneratorVaadinChallenge
 
-Meme creator Open write on Vaadin 14 to create your amazing memes!
+Meme creator open source write on Lit Element and Vaadin 14 wrapper to create memes
 
 # Version 1.0.0
  - Create a meme using grid
@@ -10,11 +10,13 @@ Meme creator Open write on Vaadin 14 to create your amazing memes!
  - Change text color
  - Change font family
  - Change font size
-
-# On next release.
- - Load image to create meme
- - Move text with mouse event on click
  - Save meme to image
+ - Move text with mouse event on click
+
+# Version 1.1.0 (on develop)
+ - Load image to create meme from file
+ - Long defult meme list
+ - Reading meme from URL
 
 [Vaadin Github Holiday Coding Challenge 2019](https://vaadin.com/blog/github-holiday-coding-challenge-2019)
 
