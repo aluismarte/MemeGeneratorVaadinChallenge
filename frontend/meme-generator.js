@@ -74,13 +74,16 @@ class MemeGenerator extends LitElement {
 
     _generateMeme() {
         let svg = this.shadowRoot.getElementById("memeGenerated");
-        let svgData = new XMLSerializer().serializeToString(svg);
+        var svgData = new XMLSerializer().serializeToString(svg);
+        svgData = svgData.split('var(--meme-generator-text-color, white)').join(this.style.getPropertyValue("--meme-generator-text-color"));
+        svgData = svgData.split('var(--meme-generator-font-family, \'Impact\')').join(this.style.getPropertyValue("--meme-generator-font-family"));
+        svgData = svgData.split('var(--meme-generator-font-size, \'50px\')').join(this.style.getPropertyValue("--meme-generator-font-size"));
         const canvas = document.createElement("canvas");
         canvas.width = this.memeWidth;
         canvas.height = this.memeHeight;
         const context = canvas.getContext("2d");
         const img = document.createElement("img");
-        img.setAttribute("src", "data:image/svg+xml;base64," + window.btoa(svgData));
+        img.src = "data:image/svg+xml;base64," + window.btoa(svgData);
         img.onload = function () {
             context.drawImage(img, 0, 0);
             const a = document.createElement("a");

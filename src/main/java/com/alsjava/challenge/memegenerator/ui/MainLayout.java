@@ -53,7 +53,7 @@ public class MainLayout extends VerticalLayout {
         mainLayout.setWidthFull();
 
         SplitLayout splitLayout = new SplitLayout(mainLayout, memeGenerator);
-        splitLayout.setSizeFull();
+        splitLayout.setWidthFull();
         add(splitLayout);
     }
 
