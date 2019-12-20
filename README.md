@@ -17,6 +17,8 @@ Meme creator open source write on Lit Element and Vaadin 14 wrapper to create me
  - Load image to create meme from file
  - Long defult meme list
  - Reading meme from URL
+ - Search meme on list
+ - Search meme on google
 
 [Vaadin Github Holiday Coding Challenge 2019](https://vaadin.com/blog/github-holiday-coding-challenge-2019)
 
