@@ -44,6 +44,8 @@ public class MainLayout extends VerticalLayout {
         memeGenerator.setSizeFull();
 
         Grid<File> grid = new Grid<>();
+        grid.setWidthFull();
+        grid.setMinHeight("300px");
         grid.addColumn(File::getName).setHeader("File");
         grid.addSelectionListener(event -> memeGenerator.setSrc(event.getFirstSelectedItem().orElse(null)));
         grid.setItems(memes);

@@ -7,6 +7,10 @@ class MemeGenerator extends LitElement {
             topText: {type: String},
             bottomText: {type: String},
             src: {type: String},
+            topTextY: {type: Number},
+            topTextX: {type: Number},
+            bottomTextY: {type: Number},
+            bottomTextX: {type: Number},
             memeWidth: {type: Number},
             memeHeight: {type: Number}
         }
@@ -50,10 +54,10 @@ class MemeGenerator extends LitElement {
             `
                 <svg id="memeGenerated" xmlns="http://www.w3.org/2000/svg" width=${this.memeWidth} height=${this.memeHeight}>
                     <image style="z-index: 2;" href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
-                    <text class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.topTextX} y=${this.topTextY} >
+                    <text id="top-text" class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.topTextX} y=${this.topTextY} @mousedown=${this.handleMouseDown} @mouseup=${this.handleMouseUp}>
                       ${this.topText}
                     </text>
-                    <text class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.bottomTextX} y=${this.bottomTextY}>
+                    <text id="bottom-text" class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.bottomTextX} y=${this.bottomTextY} @mousedown=${this.handleMouseDown} @mouseup=${this.handleMouseUp}>
                       ${this.bottomText}
                   </text>
              <div>
@@ -100,6 +104,32 @@ class MemeGenerator extends LitElement {
         const context2d = canvas.getContext("2d");
         context2d.drawImage(image, 0, 0);
         return canvas.toDataURL();
+    }
+
+    handleMouseMove(e, type) {
+        let svg = this.shadowRoot.getElementById("memeGenerated");
+        let rect = svg.getBoundingClientRect();
+        const xOffset = e.clientX - rect.left;
+        const yOffset = e.clientY - rect.top;
+        if (type === "top-text") {
+            this.topTextX = xOffset;
+            this.topTextY = yOffset;
+        } else {
+            this.bottomTextX = xOffset;
+            this.bottomTextY = yOffset;
+        }
+    }
+
+    handleMouseDown(e) {
+        const target = e.target.id;
+        document.myMoveEvent = (event) => { // Save for remove later
+            this.handleMouseMove(event, target);
+        };
+        document.addEventListener('mousemove', document.myMoveEvent);
+    }
+
+    handleMouseUp(e) {
+        document.removeEventListener('mousemove', document.myMoveEvent);
     }
 }
 
