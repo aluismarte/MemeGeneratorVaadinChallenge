@@ -1,4 +1,4 @@
-# MemeGeneratorVaadinChallenge
+# MemeGenerator Vaadin Challenge 2019
 
 Meme creator open source write on Lit Element and Vaadin 14 wrapper to create memes
 
