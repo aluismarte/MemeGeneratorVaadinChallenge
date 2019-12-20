@@ -29,3 +29,7 @@ GitHub Holiday Coding Challenge 2019 `#vaadin` `#GitHubPack`
  - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
  - https://www.w3.org/TR/SVG11/script.html
 
+# Demo
+
+![demo-gif](https://github.com/aluismarte/MemeGeneratorVaadinChallenge/blob/master/media/MemeGeneratorVaadinDemo.gif)
+
