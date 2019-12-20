@@ -42,6 +42,8 @@ dependencies {
     implementation "com.vaadin:vaadin-bom:$vaadin_version"
     implementation "com.vaadin:vaadin-spring-boot-starter:$vaadin_version"
     implementation "org.vaadin.artur:spring-data-provider:$spring_data_provider_version"
+    // Vaadin Addon
+    implementation "com.github.juchar:color-picker-field-flow:1.0.0"
     // Spring Boot
     implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
     // JSON

@@ -8,9 +8,6 @@ Meme creator Open write on Vaadin 14 to create your amazing memes!
  - Put text fixed on top and bottom.
  - Change text color.
 
-# Notes
- - Implement meme using a SVG and some vars to move and get the final result on JPN o PNG
-
 # On next release
  - Move text with mouse
  - Change text size.
@@ -21,3 +18,7 @@ Meme creator Open write on Vaadin 14 to create your amazing memes!
 [Vaadin Github Holiday Coding Challenge 2019](https://vaadin.com/blog/github-holiday-coding-challenge-2019)
 
 GitHub Holiday Coding Challenge 2019 `#vaadin` `#GitHubPack`
+
+# References
+ - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
+
