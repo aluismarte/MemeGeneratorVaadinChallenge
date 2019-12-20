@@ -2,6 +2,8 @@
 
 Meme creator open source write on Lit Element and Vaadin 14 wrapper to create memes
 
+![demo-gif](https://github.com/aluismarte/MemeGeneratorVaadinChallenge/blob/master/media/MemeGeneratorVaadinDemo.gif)
+
 # Version 1.0.0
  - Create a meme using grid
  - Put text fixed on top
@@ -28,8 +30,4 @@ GitHub Holiday Coding Challenge 2019 `#vaadin` `#GitHubPack`
  - https://lit-element.polymer-project.org/guide
  - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
  - https://www.w3.org/TR/SVG11/script.html
-
-# Demo
-
-![demo-gif](https://github.com/aluismarte/MemeGeneratorVaadinChallenge/blob/master/media/MemeGeneratorVaadinDemo.gif)
 
