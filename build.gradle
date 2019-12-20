@@ -8,8 +8,6 @@ plugins {
 group 'com.alsjava.challenge.memegenerator'
 version '0.9.0'
 
-sourceCompatibility = 1.8
-
 repositories {
     mavenCentral()
     jcenter()

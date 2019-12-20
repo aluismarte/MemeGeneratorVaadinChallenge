@@ -48,7 +48,7 @@ class MemeGenerator extends LitElement {
     render() {
         return html
             `
-                <svg xmlns="http://www.w3.org/2000/svg" id="memeGenerated" width=${this.memeWidth} height=${this.memeHeight}>
+                <svg id="memeGenerated" xmlns="http://www.w3.org/2000/svg" width=${this.memeWidth} height=${this.memeHeight}>
                     <image style="z-index: 2;" href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
                     <text class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.topTextX} y=${this.topTextY} >
                       ${this.topText}
@@ -73,24 +73,30 @@ class MemeGenerator extends LitElement {
     }
 
     _generateMeme() {
-        // Need to convert svg and later call save
-        // window.saveAs(blob, 'my-node.png');
+        let svg = this.shadowRoot.getElementById("memeGenerated");
+        let svgData = new XMLSerializer().serializeToString(svg);
+        const canvas = document.createElement("canvas");
+        canvas.width = this.memeWidth;
+        canvas.height = this.memeHeight;
+        const context = canvas.getContext("2d");
+        const img = document.createElement("img");
+        img.setAttribute("src", "data:image/svg+xml;base64," + window.btoa(svgData));
+        img.onload = function () {
+            context.drawImage(img, 0, 0);
+            const a = document.createElement("a");
+            a.download = "meme.png";
+            a.href = canvas.toDataURL();
+            a.click();
+        };
     }
 
     getBase64Image(image) {
-        let canvas = document.createElement("canvas");
+        const canvas = document.createElement("canvas");
         canvas.width = image.width;
         canvas.height = image.height;
-        let context2d = canvas.getContext("2d");
+        const context2d = canvas.getContext("2d");
         context2d.drawImage(image, 0, 0);
         return canvas.toDataURL();
-    }
-
-    convertSvgToImage() {
-        // Create canvas?
-        // Configure canvas
-        // set Images size (maybe configure)
-        // Parse to canvas
     }
 }
 
