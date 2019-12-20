@@ -53,6 +53,38 @@ public class MemeGenerator extends Component implements HasSize {
         return getElement().getAttribute("bottomText");
     }
 
+    public Double getTopTextX() {
+        return Double.parseDouble(getElement().getAttribute("topTextX"));
+    }
+
+    public void setTopTextX(Double topTextX) {
+        getElement().setAttribute("topTextX", topTextX.toString());
+    }
+
+    public Double getTopTextY() {
+        return Double.parseDouble(getElement().getAttribute("topTextY"));
+    }
+
+    public void setTopTextY(Double topTextY) {
+        getElement().setAttribute("topTextY", topTextY.toString());
+    }
+
+    public Double getBottomTextY() {
+        return Double.parseDouble(getElement().getAttribute("bottomTextY"));
+    }
+
+    public void setBottomTextY(Double bottomTextY) {
+        getElement().setAttribute("bottomTextY", bottomTextY.toString());
+    }
+
+    public Double getBottomTextX() {
+        return Double.parseDouble(getElement().getAttribute("bottomTextX"));
+    }
+
+    public void setBottomTextX(Double bottomTextX) {
+        getElement().setAttribute("bottomTextX", bottomTextX.toString());
+    }
+
     public void setSrc(File file) {
         if (file == null) {
             getElement().removeAttribute("src");
