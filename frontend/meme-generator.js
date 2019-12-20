@@ -1,4 +1,4 @@
-import {css, html, LitElement} from 'lit-element';
+import {html, LitElement} from 'lit-element';
 
 class MemeGenerator extends LitElement {
 
@@ -38,28 +38,27 @@ class MemeGenerator extends LitElement {
         };
     }
 
-    static get styles() {
-        return css`
-                .meme {
-                    text-align: center;
-                    userSelect: "none";
-                    cursor: "pointer";
-                    z-index: 4;
-                }
-            `;
-    }
-
     render() {
         return html
             `
-                <svg id="memeGenerated" xmlns="http://www.w3.org/2000/svg" width=${this.memeWidth} height=${this.memeHeight}>
-                    <image style="z-index: 2;" href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
-                    <text id="top-text" class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.topTextX} y=${this.topTextY} @mousedown=${this.handleMouseDown} @mouseup=${this.handleMouseUp}>
-                      ${this.topText}
-                    </text>
-                    <text id="bottom-text" class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.bottomTextX} y=${this.bottomTextY} @mousedown=${this.handleMouseDown} @mouseup=${this.handleMouseUp}>
-                      ${this.bottomText}
-                  </text>
+                <div>
+                    <svg id="memeGenerated" xmlns="http://www.w3.org/2000/svg" width=${this.memeWidth} height=${this.memeHeight}>
+                        <style>
+                            text {
+                                text-align: center;
+                                user-select: none;
+                                cursor: pointer;
+                                z-index: 4;
+                            }
+                        </style>
+                        <image style="z-index: 2;" href="${this.srcBase64}" height="${this.memeHeight}" width="${this.memeWidth}" x=0 y=0 />
+                        <text id="top-text" class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.topTextX} y=${this.topTextY} @mousedown=${this.handleMouseDown} @mouseup=${this.handleMouseUp}>
+                          ${this.topText}
+                        </text>
+                        <text id="bottom-text" class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.bottomTextX} y=${this.bottomTextY} @mousedown=${this.handleMouseDown} @mouseup=${this.handleMouseUp}>
+                          ${this.bottomText}
+                      </text>
+                  </div>
              <div>
             `;
     }

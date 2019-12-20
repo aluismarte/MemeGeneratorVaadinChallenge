@@ -21,5 +21,7 @@ Meme creator Open write on Vaadin 14 to create your amazing memes!
 GitHub Holiday Coding Challenge 2019 `#vaadin` `#GitHubPack`
 
 # References
+ - https://lit-element.polymer-project.org/guide
  - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
+ - https://www.w3.org/TR/SVG11/script.html
 
