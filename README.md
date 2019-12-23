@@ -16,6 +16,7 @@ Meme creator open source write on Lit Element and Vaadin 14 wrapper to create me
  - Move text with mouse event on click
 
 # Version 1.1.0 (on develop)
+ - Recreate on TypeScript (Target)
  - Load image to create meme from file
  - Long defult meme list
  - Reading meme from URL
