@@ -57,9 +57,9 @@ class MemeGenerator extends LitElement {
                         </text>
                         <text id="bottom-text" class="meme" dominant-baseline="middle" text-anchor="middle" fill="var(--meme-generator-text-color, white)" font-family="var(--meme-generator-font-family, 'Impact')" font-size="var(--meme-generator-font-size, '50px')" x=${this.bottomTextX} y=${this.bottomTextY} @mousedown=${this.handleMouseDown} @mouseup=${this.handleMouseUp}>
                           ${this.bottomText}
-                      </text>
-                  </div>
-             <div>
+                         </text>
+                    </svg>
+                </div>
             `;
     }
 
