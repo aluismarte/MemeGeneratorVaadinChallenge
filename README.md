@@ -31,6 +31,11 @@ Meme creator open source write on Lit Element and Vaadin 14 wrapper to create me
 
 GitHub Holiday Coding Challenge 2019 `#vaadin` `#GitHubPack`
 
+# Start
+ - Import project on your IDE of your choosing as a Gradle project
+ - Run main class (MemeGeneratorVaadinChallenge) or run ./gradle bootRun
+ - Open http://localhost:8080/ in a browser
+
 # References
  - https://lit-element.polymer-project.org/guide
  - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
