@@ -36,4 +36,6 @@ GitHub Holiday Coding Challenge 2019 `#vaadin` `#GitHubPack`
  - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
  - https://www.w3.org/TR/SVG11/script.html
 
+This project is licenced under [MIT](https://raw.githubusercontent.com/aluismarte/MemeGeneratorVaadinChallenge/master/LICENSE). 
+
 No commercial Vaadin components are used in this project.
