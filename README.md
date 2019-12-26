@@ -1,5 +1,9 @@
 # MemeGenerator Vaadin Challenge 2019
 
+[![Vaadin-14](https://img.shields.io/badge/Vaadin-14.1.3-blue.svg?style=flat&logo=Vagrant&logoColor=white)](https://vaadin.com/)
+[![Java-12](https://img.shields.io/badge/Java-11-red.svg?style=flat&logo=Java&logoColor=white)](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
+[![Spring-Boot](https://img.shields.io/badge/Spring-Boot-green.svg?style=flat&logo=Springt&logoColor=white)](https://spring.io/projects/spring-boot)
+
 Meme creator open source write on Lit Element and Vaadin 14 wrapper to create memes
 
 ![demo-gif](https://github.com/aluismarte/MemeGeneratorVaadinChallenge/blob/master/media/MemeGeneratorVaadinDemo.gif)
@@ -32,3 +36,4 @@ GitHub Holiday Coding Challenge 2019 `#vaadin` `#GitHubPack`
  - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
  - https://www.w3.org/TR/SVG11/script.html
 
+No commercial Vaadin components are used in this project.
