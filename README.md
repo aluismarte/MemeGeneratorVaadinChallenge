@@ -8,6 +8,11 @@ Meme creator open source write on Lit Element and Vaadin 14 wrapper to create me
 
 ![demo-gif](https://github.com/aluismarte/MemeGeneratorVaadinChallenge/blob/master/media/MemeGeneratorVaadinDemo.gif)
 
+# 1.1.0
+ - Reading meme from URL
+ - Long default meme list
+ - Search meme on list
+
 # Version 1.0.1
  - Create a meme using grid
  - Put text fixed on top
@@ -19,12 +24,8 @@ Meme creator open source write on Lit Element and Vaadin 14 wrapper to create me
  - Save meme to image
  - Move text with mouse event on click
 
-# Version 1.1.0 (on develop)
+# Pending to implement
  - Recreate on TypeScript (Target)
- - Load image to create meme from file
- - Long defult meme list
- - Reading meme from URL
- - Search meme on list
  - Search meme on google
 
 [Vaadin Github Holiday Coding Challenge 2019](https://vaadin.com/blog/github-holiday-coding-challenge-2019)

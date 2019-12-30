@@ -1,7 +1,6 @@
 package com.alsjava.challenge.memegenerator.utils;
 
-import com.vaadin.flow.spring.annotation.SpringComponent;
-import org.springframework.beans.factory.annotation.Value;
+import java.net.URL;
 
 /**
  * Created by aluis on 12/14/19.
@@ -25,5 +24,13 @@ public class Constants {
             }
         }
         return result;
+    }
+
+    public URL isValidURL(String urlString) {
+        try {
+            return new URL(urlString);
+        } catch (Exception exception) {
+            return null;
+        }
     }
 }
