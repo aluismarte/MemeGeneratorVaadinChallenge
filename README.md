@@ -2,13 +2,13 @@
 
 [![Vaadin-14](https://img.shields.io/badge/Vaadin-14.1.3-blue.svg?style=flat&logo=Vagrant&logoColor=white)](https://vaadin.com/)
 [![Java-12](https://img.shields.io/badge/Java-11-red.svg?style=flat&logo=Java&logoColor=white)](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
-[![Spring-Boot](https://img.shields.io/badge/Spring-Boot-green.svg?style=flat&logo=Springt&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Spring-Boot](https://img.shields.io/badge/Spring%20Boot-2.2.2-green.svg?style=flat&logo=Springt&logoColor=white)](https://spring.io/projects/spring-boot)
 
 Meme creator open source write on Lit Element and Vaadin 14 wrapper to create memes
 
 ![demo-gif](https://github.com/aluismarte/MemeGeneratorVaadinChallenge/blob/master/media/MemeGeneratorVaadinDemo.gif)
 
-# 1.1.0
+# Version 1.1.0
  - Reading meme from URL
  - Long default meme list
  - Search meme on list
