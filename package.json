@@ -16,5 +16,5 @@
     "webpack-merge": "4.2.2",
     "raw-loader": "3.0.0"
   },
-  "vaadinAppPackageHash": "ad31d5c48d58c20553d5d439605f1a49cc0ee084d3d1b4753a6b4ece356dc650"
+  "vaadinAppPackageHash": "c394740c60b5c27c5426ab56faa5cce88b056943918e480fdde96cae2803a523"
 }
