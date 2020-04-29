@@ -23,7 +23,7 @@ configurations {
 ext {
     junit_jupiter_version = '5.6.1'
     spring_boot_version = '2.2.6.RELEASE'
-    vaadin_version = '14.1.23'
+    vaadin_version = '14.1.27'
     lombok_version = '1.18.12'
     spring_data_provider_version = '2.0.1'
     gson_version = '2.8.6'
