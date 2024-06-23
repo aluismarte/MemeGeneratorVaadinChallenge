@@ -126,6 +126,7 @@ public class MainLayout extends VerticalLayout {
             String colorName = "[r=" + color.getRed() + ",g=" + color.getGreen() + ",b=" + color.getBlue() + "]";
             colors.add(new ColorPicker.ColorPreset(hexValue, colorName, ColorPicker.CaptionMode.HTML));
         }
+        cpTextColor.setNoClear(true);
         cpTextColor.setPresets(colors);
         cpTextColor.setLabel(Languages.get().i18n("action.font.color"));
         cpTextColor.addValueChangeListener(event -> memeGenerator.setTextColor(event.getValue()));
